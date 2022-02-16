@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <h1><%= @restaurant.name %></h1>
+</div>
+
+<div class="container d-flex mt-5">
+  <h3 class="me-3">Reviews</h3>
+  <%= link_to "Leave a Review", new_restaurant_review_path(@restaurant), class:"btn btn-primary" %>
+</div>
+
+

@@ -1,0 +1,14 @@
+<div class="container mt-5 d-flex justify-content-evenly">
+  <h1>.dank Restaurants</h1>
+  <%= link_to "Add a Restaurant", new_restaurant_path, class: "btn btn-primary" %>
+</div>
+
+<div class = "cards">
+  <% @restaurants.each do |restaurant| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?<%= restaurant.category %>&<%= rand(1000) %>)">
+      <%= restaurant.name %>
+      <%= link_to "", restaurant_path(restaurant), class:"card-link" %>
+    </div>
+  <% end %>
+</div>
+
